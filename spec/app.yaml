@@ -1,0 +1,6 @@
+development:
+  host: http://dev.mixi.jp
+test:
+  host: http://test.mixi.jp
+production:
+  host: http://mixi.jp
