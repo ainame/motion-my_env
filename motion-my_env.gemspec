@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.version       = VERSION
   spec.authors       = ["ainame"]
   spec.email         = ["s.namai.2012@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{motion-my_env is a simple enviroment managing solution on RubyMotion app. motion-my_env define MY_ENV variable on RubyMotion runtime which created by defineded yaml file.}
+  spec.summary       = %q{motion-my_env is a simple environment managing solution on RubyMotion app.}
   spec.homepage      = ""
   spec.license       = ""
 
