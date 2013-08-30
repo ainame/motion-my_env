@@ -1,4 +1,3 @@
-require 'tempfile'
 require 'fileutils'
 require 'yaml'
 
@@ -16,12 +15,13 @@ module Motion
 
     def generate_env_file path
       yaml = YAML.load(File.open(File.expand_path(path)).read)
-      env  = Tempfile.open(['motion_env', '.rb'])
-      env.write <<-"ENV_FILE"
+      tmp_path = "/tmp/motion_env.rb"
+      File.open(tmp_path, "w") { |f|
+        f.write <<-"ENV_FILE"
 MY_ENV = #{yaml.inspect}
 ENV_FILE
-      env.close
-      env.path
+      }
+      tmp_path
     end
 
     def add_file path
